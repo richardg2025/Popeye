@@ -6,7 +6,7 @@ public class Popeye {
   public static void main(String[] args) {
 
     Scanner scanner = new Scanner(System.in);
-    System.out.println("Please enter how far in Nautical Miles your location is: ");
+    System.out.println("Please enter the distance to travel in nautical miles: ");
 
     double distance = scanner.nextDouble();
 
@@ -14,13 +14,13 @@ public class Popeye {
 
     double distant_result = distance * mile;
 
-    System.out.println("Please enter the fastest knot your car can go: ");
+    System.out.println("Please enter the top speed of the boat in knots: ");
 
     double fastest_knot = scanner.nextDouble();
 
     double fastest_time = distance/fastest_knot;
 
-    System.out.println("Please enter the average knot your car can go: ");
+    System.out.println("Please enter the average speed of the boat in knots: ");
 
     double average_knot = scanner.nextDouble();
 
@@ -28,9 +28,9 @@ public class Popeye {
 
 
     DecimalFormat df = new DecimalFormat("#.##");
-    System.out.println("Miles: " + df.format(distant_result));
-    System.out.println("Fastest Time: " + df.format(fastest_time));
-    System.out.println("Average Time: " + df.format(average_time));
+    System.out.println("The distance to travel in regular miles is: " + df.format(distant_result) + " miles.");
+    System.out.println("The best case travel time is: " + df.format(fastest_time) + " hours at " + fastest_knot + " knots.");
+    System.out.println("The average case travel time is: " + df.format(average_time) + " hours at " + average_knot + " knots.");
 
   }
   
